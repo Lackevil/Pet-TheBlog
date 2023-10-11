@@ -1,0 +1,40 @@
+// -------- Reset Styles --------
+
+@import "_reset.scss";
+
+// -------- Reset Styles --------
+
+// -------- Variables --------
+
+@import "variables.scss";
+
+// -------- Variables --------
+
+// -------- Global --------
+
+body {
+   font-family: 'Inter', sans-serif;
+   font-weight: 500;
+   font-size: 1rem;
+   line-height: 150%;
+   color: $text;
+}
+
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+
+[class*="__container"] {
+   max-width: 78.125rem;
+   margin: 0 auto;
+   padding: 0 0.9375rem;
+}
+
+.main {
+   flex: 1 1 auto;
+}
+
+// -------- Global --------

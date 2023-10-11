@@ -1,0 +1,74 @@
+// -------- Header --------
+
+.header {
+   margin: 1.875em 0 3.125em 0;
+   padding: 0.625em 0;
+
+   // &__container {}
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      line-height: 120%;
+   }
+
+   &__logo {
+      font-size: 1.25rem;
+      font-weight: 600;
+   }
+
+   // &__menu {}
+
+   &__list {
+      display: flex;
+      gap: 1.875em;
+   }
+
+   // &__item {}
+
+   // &__link {} Modul - "menu-link"
+
+
+   @media (max-width: 64em) {
+      margin: 1.25em 0 2.5em 0;
+      padding: 0.5em 0;
+   }
+
+   @media (max-width: 48em) {
+      margin: 1.25em 0;
+      padding: 0.5em 0;
+
+      &__logo {
+         z-index: 4;
+      }
+
+      &__menu {
+         position: fixed;
+         z-index: 3;
+         background: #fff;
+         top: 0;
+         right: -100%;
+         width: 100vw;
+         height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         transition: .5s ease right;
+
+         .header.active & {
+            right: 0;
+         }
+      }
+
+      &__list {
+         flex-direction: column;
+         text-align: center;
+         gap: 2.25em;
+      }
+   }
+}
+
+
+
+// -------- Header --------

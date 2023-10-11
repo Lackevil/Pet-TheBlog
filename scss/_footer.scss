@@ -1,0 +1,45 @@
+// -------- Modules -------
+
+.footer {
+   padding: 1.875em 0;
+
+   // &__container {}
+
+   &__body {
+      display: flex;
+      font-size: 1.25rem;
+      font-weight: 400;
+   }
+
+   // &__copyright {}
+
+   &__social {
+      display: flex;
+      gap: 0.875rem;
+      margin: 0 0 0 0.875em;
+   }
+
+   // &__item {}
+
+   &__link {
+
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+
+   @media (max-width: 35em) {
+      &__body {
+         text-align: center;
+         flex-direction: column-reverse;
+      }
+
+      &__social {
+         flex-direction: column;
+         margin: 0 0 1.875em 0;
+      }
+   }
+}
+
+
+// -------- Modules -------
