@@ -18,6 +18,26 @@
 
 // -------- Modules --------
 
+// -------- Hero --------
+
+.hero {
+   padding-top: 3.75rem;
+
+   @media (max-width: 64rem) {
+      padding-top: 1.875rem;
+   }
+
+   @media (max-width: 40rem) {
+      padding: 0px;
+   }
+
+   @media (max-width: 25.5rem) {
+      padding-top: 1.25rem 0;
+   }
+}
+
+// -------- Hero --------
+
 // -------- Recent --------
 
 .recent {
@@ -316,5 +336,15 @@
    }
 }
 
-
 // -------- Pages -------
+
+// -------- Footer -------
+
+.footer {
+   &__body {
+      padding: 0;
+      border: none;
+   }
+}
+
+// -------- Footer -------

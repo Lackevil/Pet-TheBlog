@@ -81,7 +81,7 @@
 
 .hero {
    // &__container {}
-   padding-top: 3.125rem;
+   // padding-top: 50px;
 
    &__body {
       border-top: 0.0625rem solid #A8A8A8;
@@ -227,7 +227,7 @@
 
 .newlatters {
 
-   &__container {}
+   // &__container {}
 
    &__body {
       text-align: center;
@@ -240,7 +240,7 @@
    }
 
    &__title {
-      font-size: 3rem;
+      font-size: clamp(1rem, 10vw, 3rem);
       font-weight: 600;
       line-height: 125%;
       letter-spacing: -0.06rem;
@@ -275,6 +275,21 @@
          font-size: 1rem;
          color: #fff;
          margin-left: 16px;
+         transition: .2s ease opacity;
+
+         &:hover {
+            opacity: .8;
+         }
+      }
+
+      @media (max-width: 30.0625rem) {
+         display: flex;
+         flex-direction: column;
+         gap: 1.25rem;
+
+         input[type="submit"] {
+            margin-left: 0;
+         }
       }
    }
 
