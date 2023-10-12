@@ -1,8 +1,8 @@
 // -------- Header --------
 
 .header {
-   margin: 1.875em 0 3.125em 0;
-   padding: 0.625em 0;
+   margin: 1.875rem 0 0 0;
+   padding: 0.625rem 0;
 
    // &__container {}
 
@@ -22,7 +22,7 @@
 
    &__list {
       display: flex;
-      gap: 1.875em;
+      gap: 1.875rem;
    }
 
    // &__item {}
@@ -30,14 +30,14 @@
    // &__link {} Modul - "menu-link"
 
 
-   @media (max-width: 64em) {
-      margin: 1.25em 0 2.5em 0;
-      padding: 0.5em 0;
+   @media (max-width: 64rem) {
+      margin: 1.25rem 0 2.5rem 0;
+      padding: 0.5rem 0;
    }
 
-   @media (max-width: 48em) {
-      margin: 1.25em 0;
-      padding: 0.5em 0;
+   @media (max-width: 48rem) {
+      margin: 1.25rem 0;
+      padding: 0.5rem 0;
 
       &__logo {
          z-index: 4;
@@ -64,7 +64,7 @@
       &__list {
          flex-direction: column;
          text-align: center;
-         gap: 2.25em;
+         gap: 2.25rem;
       }
    }
 }

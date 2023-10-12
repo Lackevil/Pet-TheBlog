@@ -3,10 +3,10 @@
 // Burger
 
 #burger {
-   z-index: 3;
    display: none;
    align-items: center;
    position: relative;
+   z-index: 3;
    width: 1.875rem;
    height: 1.25rem;
 
@@ -52,7 +52,7 @@
       }
    }
 
-   @media (max-width: 48em) {
+   @media (max-width: 48rem) {
       & {
          display: flex;
       }
@@ -64,9 +64,10 @@
 .menu-link {
    font-size: clamp(1.125rem, 2vw, 1.25rem);
    font-weight: 400;
+   padding-bottom: 0.1875rem;
 
    &:hover {
-      text-decoration: underline;
+      border-bottom: 1px solid $text;
    }
 }
 
@@ -79,9 +80,8 @@
 // Hero
 
 .hero {
-   // margin: 0 0 59.2px 0;
-
    // &__container {}
+   padding-top: 3.125rem;
 
    &__body {
       border-top: 0.0625rem solid #A8A8A8;
@@ -89,19 +89,20 @@
    }
 
    &__title {
-      font-size: clamp(58px, 19vw, 15.2375rem);
+      font-size: clamp(3.625rem, 19vw, 15.2375rem);
       font-weight: 700;
       line-height: normal;
+      text-align: center;
       text-transform: uppercase;
    }
 
-   @media (max-width: 40em) {
+   @media (max-width: 40rem) {
       &__title {
          font-size: clamp(2.5rem, 18.5vw, 15.2375rem);
       }
    }
 
-   @media (max-width: 25.5em) {
+   @media (max-width: 25.5rem) {
       &__title {
          font-size: clamp(2.5rem, 17.8vw, 15.2375rem);
       }
@@ -114,59 +115,18 @@
    font-size: 1.5rem;
    font-weight: 600;
    line-height: 133.333%;
-   margin: 0 0 2.5rem 0;
-
-   @media (max-width: 48em) {
-      margin: 0 0 1.25rem 0;
-   }
-}
-
-// Categories Items
-
-.categories__item-purple {
-   background: $category-purple-background;
-   color: $category-purple-text;
-}
-
-.categories__item-blue {
-   background: $category-blue-background;
-   color: $category-blue-text;
-}
-
-.categories__item-red {
-   background: $category-red-background;
-   color: $category-red-text;
-}
-
-.categories__item-green {
-   background: $category-green-background;
-   color: $category-green-text;
-}
-
-.categories__item-yellow {
-   background: $category-yellow-background;
-   color: $category-yellow-text;
-}
-
-.categories__item-gray {
-   background: $category-gray-background;
-   color: $category-gray-text;
 }
 
 // Article 
 
 .article {
-   // width: 100%;
 
    &__image {
 
       img {
-         // display: block;
-         // max-width: 100%;
          object-fit: cover;
+         object-position: center;
          width: 100%;
-         // max-height: 228px;
-         // height: 100%;
       }
    }
 
@@ -213,11 +173,121 @@
       line-height: 142.857%;
    }
 
-   // &__item-purple {}
+   &__item-purple {
+      background: #F9F5FF;
+      color: #6941C6;
+   }
 
-   // &__item-blue {}
+   &__item-blue {
+      background: #EEF4FF;
+      color: #3538CD;
+   }
 
-   // &__item-red {}
+   &__item-red {
+      background: #FDF2FA;
+      color: #C11574;
+   }
+
+   &__item-green {
+      background: #ECFDF3;
+      color: #027A48;
+   }
+
+   &__item-yellow {
+      background: #FFF6ED;
+      color: #C4320A;
+   }
+
+   &__item-gray {
+      background: #F8F9FC;
+      color: #363F72;
+   }
+
 }
+
+// Article link 
+
+.article__link {
+   transition: .2s ease opacity;
+   display: flex;
+
+   &:hover {
+      opacity: .5;
+   }
+}
+
+.article__image.article__link {
+
+   &:hover {
+      opacity: .8;
+   }
+}
+
+// Newsletters
+
+.newlatters {
+
+   &__container {}
+
+   &__body {
+      text-align: center;
+   }
+
+   &__pretitle {
+      color: #7F56D9;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+   }
+
+   &__title {
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 125%;
+      letter-spacing: -0.06rem;
+      margin-bottom: 1.5rem;
+   }
+
+   &__text {
+      font-size: 1.25rem;
+      color: $text-description;
+      max-width: 48rem;
+      margin: 0 auto 3rem;
+   }
+
+   &__form {
+      margin-bottom: 0.5rem;
+
+      input[type="email"] {
+         padding: 0.75rem 1rem;
+         font-size: 1rem;
+         color: $text-description;  
+         font-weight: 400;
+         border: 0.0625rem solid #D0D5DD;
+         box-shadow: 0rem 0.0625rem 0.125rem 0rem rgba(16, 24, 40, 0.05);
+         border-radius: 0.5rem;
+      }
+
+      input[type="submit"] {
+         padding: 0.75rem 1.25rem;
+         background: #7F56D9;
+         border-radius: 0.5rem;
+         font-size: 500;
+         font-size: 1rem;
+         color: #fff;
+         margin-left: 16px;
+      }
+   }
+
+   &__privacy {
+      color: $text-description;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+
+      a {
+         text-decoration: underline;
+      }
+   }
+}
+
 
 // -------- Modules -------

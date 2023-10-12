@@ -21,12 +21,7 @@
 
    // &__item {}
 
-   &__link {
-
-      &:hover {
-         text-decoration: underline;
-      }
-   }
+   // &__link {}
 
    @media (max-width: 35em) {
       &__body {

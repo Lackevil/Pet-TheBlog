@@ -4,6 +4,12 @@
 
 // -------- Global --------
 
+// -------- Variables --------
+
+@import "_variables.scss";
+
+// -------- Variables --------
+
 // -------- Modules --------
 
 @import "_modules.scss";
@@ -19,19 +25,26 @@
 
    // &__body {}
 
-   // &__title {}
+   &__title {
+      margin: 0 0 40px 0;
+
+      @media (max-width: 48rem) {
+         margin: 0 0 1.25rem 0;
+      }
+   }
 
    &__top {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(31.25rem, 1fr));
       gap: 2rem;
       margin-bottom: 3.75rem;
 
+      // For big top left
       .article {
 
          &__image {
             margin-bottom: 2rem;
-            height: 228px;
+            height: 14.25rem;
 
             img {
                height: 100%;
@@ -51,15 +64,16 @@
          }
       }
 
-      @media (max-width: 1055px) {
+      @media (max-width: 65.9375rem) {
          margin-bottom: 1.875rem;
       }
 
-      @media (max-width: 554px) {
+      @media (max-width: 34.625rem) {
          grid-template-columns: 1fr;
       }
    }
 
+   // For two top right
    &__duo {
       display: flex;
       flex-direction: column;
@@ -68,15 +82,15 @@
       .recent__article {
          display: flex;
          gap: 1.5rem;
-         height: 200px;
-         
+         height: 12.5rem;
+
          @media (max-width: 34.625em) {
             height: auto;
 
             .article {
 
                &__image {
-                  max-height: 200px;
+                  max-height: 12.5rem;
                }
             }
          }
@@ -93,7 +107,7 @@
             flex: 1 1 50%;
 
             img {
-               height: 200px;
+               height: 12.5rem;
             }
          }
 
@@ -114,15 +128,16 @@
             font-size: 1rem;
          }
 
-         @media (max-width: 554px) {
+         @media (max-width: 34.625rem) {
             flex-direction: column;
          }
       }
    }
 
+   // For bottom big
    .article-bottom {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(31.25rem, 1fr));
       gap: 1.5rem;
 
       .article {
@@ -134,8 +149,8 @@
                height: 100%;
                width: 100%;
 
-               @media (max-width: 1055px) {
-                  max-height: 248px;
+               @media (max-width: 65.9375rem) {
+                  max-height: 15.5rem;
                }
             }
          }
@@ -158,11 +173,11 @@
       }
    }
 
-   @media (max-width: 1055px) {
+   @media (max-width: 65.9375rem) {
       padding: 2.5rem 0 1.25rem;
    }
 
-   @media (max-width: 550px) {
+   @media (max-width: 34.375rem) {
       padding: 1.25rem 0 0.625rem;
    }
 }
@@ -174,15 +189,27 @@
 .all {
    padding: 1.875rem 0;
 
-   &__container {}
+   // &__container {}
 
-   &__body {}
+   // &__body {}
+
+   &__title {
+      margin: 0 0 40px 0;
+
+      @media (max-width: 48rem) {
+         margin: 0 0 1.25rem 0;
+      }
+   }
 
    &__row {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 3rem 2rem;
       margin-bottom: 1.875rem;
+
+      @media (max-width: 350px) {
+         grid-template-columns: 1fr;
+      }
    }
 
    .article {
@@ -193,6 +220,7 @@
 
          img {
             max-width: 100%;
+            object-fit: cover;
          }
       }
 
@@ -215,17 +243,16 @@
 // -------- Pages -------
 
 .pages {
-   
-   &__container {
- 
-   }
+   margin-bottom: 1.875rem;
+
+   // &__container {}
 
    &__body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 20px;
-      border-top: 1px solid #EAECF0;
+      padding-top: 1.25rem;
+      border-top: 0.0625rem solid #EAECF0;
    }
 
    &__fast {
@@ -249,7 +276,7 @@
       }
    }
 
-   &__nav {}
+   // &__nav {}
 
    &__list {
       display: flex;
@@ -262,8 +289,8 @@
       transition: .2s ease all;
 
       &:hover {
-         background: $category-purple-background;
-         color: $category-purple-text;
+         background: #F9F5FF;
+         color: #6941C6;
       }
    }
 
@@ -279,12 +306,12 @@
       }
    }
 
-   @media (max-width: 684px) {
+   @media (max-width: 42.75rem) {
       &__body {
-         padding-bottom: 30px;
-         border-bottom: 1px solid #EAECF0;
+         padding-bottom: 1.875rem;
+         border-bottom: 0.0625rem solid #EAECF0;
          flex-direction: column;
-         gap: 20px;
+         gap: 1.25rem;
       }
    }
 }

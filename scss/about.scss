@@ -1,0 +1,110 @@
+// -------- Global --------
+
+@import "global.scss";
+
+// -------- Global --------
+
+// -------- Variables --------
+
+@import "_variables.scss";
+
+// -------- Variables --------
+
+// -------- Modules --------
+
+@import "_modules.scss";
+@import "_header.scss";
+@import "_footer.scss";
+
+// -------- Modules --------
+
+// -------- Hero --------
+
+.hero {
+   padding: 60px 0;
+
+   // &__container {}
+
+   // &__body {}
+
+   &__title {
+      font-size: clamp(3.625rem, 18vw, 14rem);
+   }
+
+   @media (max-width: 40rem) {
+      &__title {
+         font-size: clamp(2.5rem, 17.5vw, 14rem);
+      }
+   }
+
+   @media (max-width: 25.5rem) {
+      &__title {
+         font-size: clamp(2.5rem, 16.8vw, 14rem);
+      }
+   }
+}
+
+// -------- Hero --------
+
+// -------- About --------
+
+.about {
+   padding: 0 0 1.875rem 0;
+
+   // &__container {}
+
+   // &__body {}
+
+   &__image {
+      max-width: 100%;
+      width: 100%;
+      object-fit: cover;
+   }
+
+   &__block {
+      margin: 2rem 0;
+
+      &:last-of-type {
+         margin-bottom: 0;
+      }
+   }
+
+   &__title {
+      margin-bottom: 0.75rem;
+   }
+
+   &__text {
+      color: $text-description;
+   }
+
+   &__list {
+      color: $text-description;
+      margin-left: 20px;
+   }
+
+   &__item {
+      list-style-type: disc;
+   }
+
+   @media (max-width: 48rem) {
+      padding: 2.5rem 0 1.25rem;
+   }
+
+   @media (max-width: 37.875rem) {
+      padding: 1.875rem 0 1.25rem;
+   }
+}
+
+// -------- About --------
+
+// -------- Footer --------
+
+.footer {
+
+   &__body {
+      border-top: 1px solid #EAECF0;
+      padding-top: 30px;
+   }
+}
+
+// -------- Footer --------
