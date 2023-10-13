@@ -411,72 +411,97 @@ body {
   }
 }
 
-.hero {
-  padding: 3.75rem 0;
+.main {
+  padding: 3.75rem 0 1.875rem;
 }
-.hero__title {
-  font-size: clamp(3.625rem, 18vw, 14.1875rem);
+.main__container {
+  display: flex;
+  gap: 2rem;
 }
-@media (max-width: 48rem) {
-  .hero {
-    padding: 1.875rem 0;
+@media (max-width: 64rem) {
+  .main {
+    padding: 1.875rem 0 1.25rem;
   }
 }
-@media (max-width: 40rem) {
-  .hero {
+@media (max-width: 51.25rem) {
+  .main {
     padding: 1.25rem 0;
   }
-  .hero__title {
-    font-size: clamp(2.5rem, 17vw, 15.2375rem);
-  }
-}
-@media (max-width: 25.5rem) {
-  .hero {
-    padding: 0.625rem 0;
-  }
-  .hero__title {
-    font-size: clamp(2.5rem, 16vw, 15.2375rem);
+  .main__container {
+    flex-direction: column;
   }
 }
 
-.projects {
-  padding-bottom: 1.25rem;
+.recent {
+  flex: 1 1 21.375rem;
 }
-.projects__title {
-  margin-bottom: 32px;
-}
-.projects__row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: auto;
-  gap: 2rem;
-}
-@media (max-width: 48rem) {
-  .projects__row {
-    grid-template-columns: 1fr;
-  }
-}
-.projects .article__image {
+.recent__title {
   margin-bottom: 2rem;
-  height: 40vh;
 }
-.projects .article__image img {
+.recent .article:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+.recent .article__image {
+  margin-bottom: 2rem;
+  height: 12.75rem;
+}
+.recent .article__image img {
   height: 100%;
 }
-.projects .article__header {
+.recent .article__info {
   margin-bottom: 0.75rem;
 }
-.projects .article__text {
+.recent .article__title {
+  margin-bottom: 0.75rem;
+}
+.recent .article__text {
   margin-bottom: 1.5rem;
 }
-.projects .recent__article--big {
-  grid-column: 1/3;
+
+.info {
+  flex: 1 1 70%;
 }
-@media (max-width: 48rem) {
-  .projects__row {
-    grid-template-columns: minmax(6.25rem, 1fr);
-  }
-  .projects .recent__article--big {
-    grid-column: initial;
-  }
+.info__data {
+  color: #6941C6;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 142%;
+  margin-bottom: 2rem;
+}
+.info__title {
+  font-size: clamp(1rem, 4vw, 36px);
+  font-weight: 700;
+  line-height: 88%;
+  margin-bottom: 2rem;
+}
+.info__subtitle {
+  color: #667085;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+.info__text {
+  color: #667085;
+  margin-bottom: 12px;
+}
+.info__defi {
+  color: #667085;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+.info img {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 0.75rem;
+}
+.info img:first-of-type {
+  margin-bottom: 2rem;
+}
+.info mark {
+  background: none;
+  font-weight: 700;
+  color: #667085;
+}
+
+.article__categories {
+  margin-bottom: 2rem;
 }

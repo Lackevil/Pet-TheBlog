@@ -27,7 +27,7 @@
       font-size: clamp(3.625rem, 18vw, 14.1875rem);
    }
 
-   @media (max-width: 768px) {
+   @media (max-width: 48rem) {
       padding: 1.875rem 0;
    }
  
@@ -55,9 +55,9 @@
 .projects {
    padding-bottom: 1.25rem;
 
-   &__container {}
+   // &__container {}
 
-   &__body {}
+   // &__body {}
 
    &__title {
       margin-bottom: 32px;
@@ -69,7 +69,7 @@
       grid-auto-rows: auto;
       gap: 2rem;
 
-      @media (max-width: 768px) {
+      @media (max-width: 48rem) {
          grid-template-columns: 1fr;
       }
    }
@@ -98,9 +98,9 @@
       grid-column: 1 / 3;
    }
 
-   @media (max-width: 768px) {
+   @media (max-width: 48rem) {
       &__row {
-         grid-template-columns: minmax(100px, 1fr);
+         grid-template-columns: minmax(6.25rem, 1fr);
       }
 
       .recent__article--big {
